@@ -18,6 +18,9 @@
     --muted: #c98a8a;
     --border: #4a0808;
     --yt-red: #ff0000;
+    --discord-color: #5865F2;
+    --twitch-color: #9146FF;
+    --tg-color: #0088cc;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -128,7 +131,6 @@
     box-shadow: 0 12px 45px rgba(255, 26, 26, .25), inset 0 0 25px rgba(255, 26, 26, .08);
   }
 
-  /* Стили для аватарки */
   .avatar {
     width: 100px;
     height: 100px;
@@ -142,14 +144,13 @@
     margin-bottom: 20px;
     box-shadow: 0 0 20px rgba(179, 0, 0, 0.4);
     transition: all 0.3s ease;
-    overflow: hidden; /* Обрезает картинку по кругу */
+    overflow: hidden;
   }
   
-  /* Картинка внутри аватарки */
   .avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Чтобы картинка заполнила весь круг без искажений */
+    object-fit: cover;
   }
 
   .card:hover .avatar {
@@ -348,6 +349,24 @@
     color: var(--blood-bright);
   }
 
+  .link-btn.discord-btn { border-color: var(--discord-color); color: var(--discord-color); }
+  .link-btn.discord-btn:hover { background: var(--discord-color); color: #fff; }
+
+  .link-btn.twitch-btn { border-color: var(--twitch-color); color: var(--twitch-color); }
+  .link-btn.twitch-btn:hover { background: var(--twitch-color); color: #fff; }
+
+  .link-btn.tg-btn { border-color: var(--tg-color); color: var(--tg-color); }
+  .link-btn.tg-btn:hover { background: var(--tg-color); color: #fff; }
+
+  .link-btn.site-btn { border-color: var(--blood-bright); color: var(--blood-bright); }
+  .link-btn.site-btn:hover { background: var(--blood-bright); color: #fff; }
+
+  .link-btn.donate-btn { border-color: #f96854; color: #f96854; }
+  .link-btn.donate-btn:hover { background: #f96854; color: #fff; }
+
+  .link-btn.boosty-btn { border-color: #ff7a00; color: #ff7a00; }
+  .link-btn.boosty-btn:hover { background: #ff7a00; color: #fff; }
+
   footer {
     text-align: center;
     padding: 30px 20px 50px;
@@ -384,20 +403,64 @@
     <div class="card" data-modal="partner-max">
       <div class="avatar">👑</div>
       <h3>Бясумный Макс</h3>
-      <div class="platform">YouTube · Twitch</div>
-      <p>Создатель проекта. Обзоры обновлений, скрытые механики модов и хардкорное выживание.</p>
+      <div class="platform">YouTube · Discord</div>
+      <p>Владелец сервера «Багрянство». Автор видео о выживании, ивентах и жизни на проекте.</p>
       <span class="btn-more">Подробнее</span>
     </div>
 
     <!-- ПАРТНЕР 2: ТИМОШКА ИЗ МОСКВЫ -->
     <div class="card" data-modal="partner-timosha">
       <div class="avatar">
-        <!-- ТУТ ПОДКЛЮЧЕНА ТВОЯ КАРТИНКА -->
         <img src="timosha.png" alt="Тимошка из Москвы">
       </div>
       <h3>Тимошка из Москвы</h3>
       <div class="platform">YouTube · Taplink</div>
       <p>Майнкрафт-блогер, который снимает весёлые видосы и стримит выживание на сервере.</p>
+      <span class="btn-more">Подробнее</span>
+    </div>
+
+    <!-- ПАРТНЕР 3: AVES_GREE -->
+    <div class="card" data-modal="partner-aves">
+      <div class="avatar">🦅</div>
+      <h3>Aves_gree</h3>
+      <div class="platform">YouTube · Twitch</div>
+      <p>Мог забананить, а нет не могу. Начинающий ютубер Кирилл снимает игровые видео и стримит.</p>
+      <span class="btn-more">Подробнее</span>
+    </div>
+
+    <!-- ПАРТНЕР 4: ЛУАЧЕЛ -->
+    <div class="card" data-modal="partner-luachel">
+      <div class="avatar">🎭</div>
+      <h3>ЛуаЧел</h3>
+      <div class="platform">YouTube · Telegram</div>
+      <p>Ютубер. И просто обычный чел, который любит страдать фигней.</p>
+      <span class="btn-more">Подробнее</span>
+    </div>
+
+    <!-- ПАРТНЕР 5: GRINCHSTORY -->
+    <div class="card" data-modal="partner-grinch">
+      <div class="avatar">😈</div>
+      <h3>GrinchStory</h3>
+      <div class="platform">YouTube</div>
+      <p>«Я хочу быть Гринчом всегда». Ютубер, который готовит большой ивент с приглашением других блогеров.</p>
+      <span class="btn-more">Подробнее</span>
+    </div>
+
+    <!-- ПАРТНЕР 6: BEATLEWIND -->
+    <div class="card" data-modal="partner-beatlewind">
+      <div class="avatar">🪲</div>
+      <h3>beatlewind</h3>
+      <div class="platform">YouTube · Discord · Telegram</div>
+      <p>Прикольный майнкрафт-блогер. Снимает факты о Minecraft и развлекательный контент. Автор комиксов skx studios.</p>
+      <span class="btn-more">Подробнее</span>
+    </div>
+
+    <!-- ПАРТНЕР 7: FAZ_ZY -->
+    <div class="card" data-modal="partner-fazzy">
+      <div class="avatar">🎮</div>
+      <h3>Faz_Zy</h3>
+      <div class="platform">YouTube · Twitch · DonationAlerts</div>
+      <p>Начинающий контент-мейкер. Стримит на Twitch, снимает видео на YouTube и собирает донаты на улучшение ПК.</p>
       <span class="btn-more">Подробнее</span>
     </div>
 
@@ -412,25 +475,24 @@
         <div class="avatar">👑</div>
         <div>
           <h2>Бясумный Макс</h2>
-          <div class="platform">YouTube · Twitch</div>
+          <div class="platform">YouTube · Discord</div>
         </div>
       </div>
 
       <div class="modal-content">
         <h4>О канале</h4>
-        <p>Привет! Я создатель сервера Багрянство. На моем канале вы найдете полные гайды по механикам сервера, обзоры кастомных модов и, конечно же, хардкорные выживания, где каждый шаг может стать последним.</p>
-        <p>Я показываю игру изнутри: как работают админы, как строятся ивенты и как выжить в самых суровых условиях нашего мира.</p>
+        <p><strong>Является владельцем сервера Багрянство.</strong> На своём YouTube-канале он рассказывает о жизни проекта, показывает игровые механики, ивенты и делится планами по развитию сервера.</p>
+        <p>Наш сервер — это <strong>Technomagic island</strong>. Здесь вас ждут увлекательные моды, собственные острова для выживания, игровые магазины и захватывающие сражения на PvP арене.</p>
 
-        <h4>Что на канале:</h4>
-        <ul>
-          <li>Обзоры крупных обновлений сервера.</li>
-          <li>Гайды по боевой системе и данжам.</li>
-          <li>Стримы с раздачей донатов и плюшек для зрителей.</li>
-        </ul>
+        <h4>Ссылки:</h4>
 
-        <a href="https://youtube.com" class="yt-btn" target="_blank">
+        <a href="https://youtube.com/@max_ivanovih" class="yt-btn" target="_blank">
           <svg viewBox="0 0 24 24"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4s-6.254,0-7.814,0.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
-          Перейти на YouTube
+          YouTube Канал
+        </a>
+
+        <a href="https://discord.gg/FRmAAcvKyZ" class="link-btn discord-btn" target="_blank">
+          💬 Discord Сервер «Багрянство»
         </a>
       </div>
     </div>
@@ -443,7 +505,6 @@
 
       <div class="modal-header">
         <div class="avatar">
-          <!-- ТУТ ПОДКЛЮЧЕНА ТВОЯ КАРТИНКА -->
           <img src="timosha.png" alt="Тимошка из Москвы">
         </div>
         <div>
@@ -474,6 +535,186 @@
 
         <a href="https://t.me/MinecraftWithTimosha" class="link-btn" target="_blank">
           ✈️ Telegram Канал
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО: AVES_GREE -->
+  <div class="modal-overlay" id="partner-aves">
+    <div class="modal">
+      <button class="modal-close">&times;</button>
+
+      <div class="modal-header">
+        <div class="avatar">🦅</div>
+        <div>
+          <h2>Aves_gree</h2>
+          <div class="platform">YouTube · Twitch</div>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <h4>О канале</h4>
+        <p>Aves_gree (Кирилл) — начинающий ютубер, который снимает видео по играм. Несмотря на то что канал был создан не так давно, он уже собрал вокруг себя аудиторию и продолжает развиваться.</p>
+        <p>«Мог забананить, а нет не могу» — именно так он описывает свой подход к контенту и общению с аудиторией.</p>
+
+        <h4>Ссылки:</h4>
+
+        <a href="https://www.youtube.com/@Aves_gree" class="yt-btn" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4s-6.254,0-7.814,0.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
+          YouTube Канал
+        </a>
+
+        <a href="https://t.me/avesgree" class="link-btn tg-btn" target="_blank">
+          ✈️ Telegram Канал
+        </a>
+
+        <a href="https://www.twitch.tv/aves_gree" class="link-btn twitch-btn" target="_blank">
+          🟣 Twitch Канал
+        </a>
+
+        <a href="https://discord.gg/2Zbn88TgU" class="link-btn discord-btn" target="_blank">
+          💬 Discord Сервер
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО: ЛУАЧЕЛ -->
+  <div class="modal-overlay" id="partner-luachel">
+    <div class="modal">
+      <button class="modal-close">&times;</button>
+
+      <div class="modal-header">
+        <div class="avatar">🎭</div>
+        <div>
+          <h2>ЛуаЧел</h2>
+          <div class="platform">YouTube · Telegram</div>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <h4>О канале</h4>
+        <p>ЛуаЧел — ютубер и просто обычный человек, который любит страдать фигней. На своём канале он снимает видео в расслабленной и непринуждённой атмосфере, не забывая при этом шутить и веселить зрителей.</p>
+        <p>Его контент — это лёгкий и позитивный взгляд на игры и повседневность. Подписывайтесь, чтобы скоротать время и посмеяться вместе с ним.</p>
+
+        <h4>Ссылки:</h4>
+
+        <a href="https://youtube.com/@luachel" class="yt-btn" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4s-6.254,0-7.814,0.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
+          YouTube Канал
+        </a>
+
+        <a href="https://t.me/bazaluachel" class="link-btn tg-btn" target="_blank">
+          ✈️ Telegram Канал
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО: GRINCHSTORY -->
+  <div class="modal-overlay" id="partner-grinch">
+    <div class="modal">
+      <button class="modal-close">&times;</button>
+
+      <div class="modal-header">
+        <div class="avatar">😈</div>
+        <div>
+          <h2>GrinchStory</h2>
+          <div class="platform">YouTube</div>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <h4>О канале</h4>
+        <p>GrinchStory (ГРИНЧ) — ютубер, который обожает Minecraft и масштабные ивенты. На своём канале он делится планами по созданию собственного сервера и приглашает других блогеров для участия в грандиозных мероприятиях.</p>
+        <p>Его девиз: «Я хочу быть Гринчом всегда». Сейчас он активно ищет технического администратора для помощи в настройке сервера для будущего ивента.</p>
+
+        <h4>Ссылки:</h4>
+
+        <a href="https://www.youtube.com/@GrinchStory" class="yt-btn" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4s-6.254,0-7.814,0.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
+          YouTube Канал
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО: BEATLEWIND -->
+  <div class="modal-overlay" id="partner-beatlewind">
+    <div class="modal">
+      <button class="modal-close">&times;</button>
+
+      <div class="modal-header">
+        <div class="avatar">🪲</div>
+        <div>
+          <h2>beatlewind</h2>
+          <div class="platform">YouTube · Discord · Telegram</div>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <h4>О канале</h4>
+        <p>beatlewind — прикольный майнкрафт-блогер, который снимает видео про факты о Minecraft и развлекательный контент. На его канале вы найдёте интересные подборки, лайфхаки и просто весёлые ролики по игре.</p>
+        <p>Помимо YouTube, он развивает собственный проект <strong>skx studios</strong>, где вместе с командой создаёт комиксы (например, серию «Crystal of Life»).</p>
+
+        <h4>Ссылки:</h4>
+
+        <a href="https://www.youtube.com/@beatlewind" class="yt-btn" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4s-6.254,0-7.814,0.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
+          YouTube Канал
+        </a>
+
+        <a href="https://discord.gg/SVCwA5Z4wG" class="link-btn discord-btn" target="_blank">
+          💬 Discord Сервер
+        </a>
+
+        <a href="https://t.me/beatlewindofficial" class="link-btn tg-btn" target="_blank">
+          ✈️ Telegram Канал
+        </a>
+
+        <a href="https://beatlewin.github.io/skxstudio/" class="link-btn site-btn" target="_blank">
+          🌐 Сайт skx studios
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО: FAZ_ZY -->
+  <div class="modal-overlay" id="partner-fazzy">
+    <div class="modal">
+      <button class="modal-close">&times;</button>
+
+      <div class="modal-header">
+        <div class="avatar">🎮</div>
+        <div>
+          <h2>Faz_Zy</h2>
+          <div class="platform">YouTube · Twitch · DonationAlerts</div>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <h4>О канале</h4>
+        <p>Faz_Zy — начинающий контент-мейкер, который активно развивает свои каналы на YouTube и Twitch. На данный момент у него небольшое, но уютное сообщество, а сам он регулярно проводит трансляции.</p>
+        <p>Помимо создания контента, он собирает донаты на улучшение своего ПК, чтобы делать стримы ещё качественнее.</p>
+
+        <h4>Ссылки:</h4>
+
+        <a href="https://www.youtube.com/@Faz_Zy" class="yt-btn" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4s-6.254,0-7.814,0.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
+          YouTube Канал
+        </a>
+
+        <a href="https://www.twitch.tv/faz_zy" class="link-btn twitch-btn" target="_blank">
+          🟣 Twitch Канал
+        </a>
+
+        <a href="https://www.donationalerts.com/r/faz_zy" class="link-btn donate-btn" target="_blank">
+          💸 DonationAlerts (Поддержать)
+        </a>
+
+        <a href="https://boosty.to/faz_zy_boosty" class="link-btn boosty-btn" target="_blank">
+          💰 Boosty (Поддержать)
         </a>
       </div>
     </div>
